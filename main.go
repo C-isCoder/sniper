@@ -17,5 +17,5 @@ func main() {
 		job.Cmd,
 	)
 
-	root.Execute()
+	_ = root.Execute()
 }

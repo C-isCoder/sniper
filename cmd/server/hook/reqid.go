@@ -17,7 +17,7 @@ func NewRequestID() *twirp.ServerHooks {
 			ctx = context.WithValue(ctx, ctxkit.StartTimeKey, time.Now())
 
 			traceID := trace.GetTraceID(ctx)
-			twirp.SetHTTPResponseHeader(ctx, "x-trace-id", traceID)
+			_ = twirp.SetHTTPResponseHeader(ctx, "x-trace-id", traceID)
 
 			ctx = ctxkit.WithTraceID(ctx, traceID)
 

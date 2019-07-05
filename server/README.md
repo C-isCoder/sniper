@@ -11,7 +11,7 @@ server 层跟 rpc 目录一一对应，原则上使用 `{service_name}server{ver
 ## 实现接口
 服务接口定义在 rpc 目录对应的 service.twirp.go 中，是自动生成的。
 ```go
-package userserver0
+package demoserver1
 
 import (
 	// 标准库单列一组

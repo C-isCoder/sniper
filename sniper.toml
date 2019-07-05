@@ -6,7 +6,7 @@ LOG_LEVEL = "debug"
 # 必须设置 parseTime 选项
 # 通过 ${NAME} 可以获取 DB 连接池
 # 时区问题参考 https://www.jianshu.com/p/3f7fc9093db4
-DB_DEFAULT_DSN = "foo:bar@tcp(127.0.0.1:3306)/baz?parseTime=true&loc=Local"
+DB_DEFAULT_DSN = "root:Pythonmysqlpassword.@tcp(127.0.0.1:3306)/ysb_db?parseTime=true&loc=Local"
 
 # MC 配置，格式为 MC_${NAME}_HOSTS = "host1,host2"
 # 通过 ${NAME} 可以获取 MC 连接池
