@@ -70,9 +70,9 @@ HMACSHA256(
 */
 
 // 过期间隔 2 hour
-//var expInterval = time.Duration(2 * (60 /*s*/ * 60 /*m*/))
+var expInterval = time.Duration(2 * (60 /*s*/ * 60 /*m*/))
 // test 1 min
-var expInterval = time.Duration(1 * 60)
+//var expInterval = time.Duration(1 * 60)
 
 func NewToken(uid, name string) JWT {
 	head := header()
