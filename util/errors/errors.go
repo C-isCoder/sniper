@@ -5,6 +5,13 @@ import (
 	"github.com/pkg/errors"
 )
 
+const (
+	// 业务正常
+	CodeOk int32 = 10000
+	// 业务异常
+	CodeNo int32 = 20000
+)
+
 // NotLoginError 错误未登录
 var NotLoginError = twirp.NewError(twirp.Unauthenticated, "must login")
 

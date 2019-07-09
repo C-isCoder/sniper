@@ -13,7 +13,7 @@ import (
 	"sniper/util/metrics"
 
 	"github.com/go-sql-driver/mysql"
-	opentracing "github.com/opentracing/opentracing-go"
+	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/ext"
 )
 
@@ -80,6 +80,11 @@ func SQLSelect(table string, sql string) Query {
 		sql:     sql,
 		sqlType: "SELECT",
 	}
+}
+
+// 获取默认的 DB 连接池对象
+func GetDefault(ctx context.Context) *DB {
+	return Get(ctx, "default")
 }
 
 // Get 根据配置名字创建并返回 DB 连接池对象
